@@ -336,7 +336,11 @@ Theorem bound_default :
     bound k t = false ->
     lookup d k t = d.
 Proof.
-(* Substitua esta linha pela sua prova. *)Admitted.
+  intros V d k t.
+  induction t.
+  - reflexivity.
+  - bdall.
+Qed.
 
 (** ** Remoção *)
 
